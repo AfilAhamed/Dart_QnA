@@ -29,6 +29,5 @@ void main() {
       sum += positive[j];
     }
   }
-
   print(sum);
 }
