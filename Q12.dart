@@ -9,6 +9,7 @@ void main() {
     "Franklin": "10/12/1815",
   };
   stdout.write('enter name ');
+
   String name = stdin.readLineSync().toString();
 
   print('$name s birthdays is ${birthdays[name]} ');
