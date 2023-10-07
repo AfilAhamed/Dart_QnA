@@ -19,6 +19,7 @@ void main() {
   ];
 
   List<dynamic> numbers = [];
+
   numbers = stringlist.where((element) => element.runtimeType == int).toList();
   stringlist.removeWhere((element) => element.runtimeType == int);
   stringlist = stringlist.toSet().toList();
