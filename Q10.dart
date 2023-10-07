@@ -1,5 +1,5 @@
 void main() {
-  List<dynamic> mainlist = [
+  List<dynamic> stringlist = [
     "apple",
     "banana",
     "cherry",
@@ -18,14 +18,10 @@ void main() {
     31,
   ];
 
-  List<dynamic> intt = [];
-  List<dynamic> task = [];
-  List<dynamic> string = [];
-  intt = mainlist.where((element) => element.runtimeType == int).toList();
-  mainlist.removeWhere((e) => e.runtimeType == int);
-
-  string.add(mainlist.join(','));
-
-  task = string + intt;
-  print(task);
+  List<dynamic> numbers = [];
+  numbers = stringlist.where((element) => element.runtimeType == int).toList();
+  stringlist.removeWhere((element) => element.runtimeType == int);
+  stringlist = stringlist.toSet().toList();
+  stringlist.addAll(numbers);
+  print(stringlist);
 }
